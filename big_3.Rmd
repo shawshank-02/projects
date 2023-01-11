@@ -1,0 +1,95 @@
+---
+title: "Tennis Big 3"
+author: "Callan Pringle"
+date: "2023-01-11"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(tidyverse)
+library(tibble)
+library(ggplot2)
+library(readxl)
+```
+
+
+```{r}
+Big_3 <- read_excel('C:\\Users\\calla\\Desktop\\Github\\Big_3.xlsx')
+```
+
+
+
+```{r}
+ggplot(Big_3, aes(year, gs_won)) +
+  geom_line(aes(color = player)) +
+  scale_color_manual(values = c("Blue", "Green", "Orange")) +
+  labs(
+    x = "Year",
+    y = "Number of Grand Slams",
+    color = "Player",
+    title = "Annual Grand Slam Haul",
+    subtitle = "Every year from 2003 - 2022") +
+  theme_minimal()
+```
+```{r}
+ggplot(Big_3, aes(year, rolling_gs_avg)) +
+  geom_line(aes(color = player)) +
+  scale_color_manual(values = c("Blue", "Green", "Orange")) +
+  labs(
+    x = "Year",
+    y = "Number of Grand Slams",
+    color = "Player",
+    title = "3-Year Average Annual Grand Slam Haul",
+    subtitle = "Every year from 2003 - 2022") +
+  theme_minimal()
+```
+
+
+
+```{r}
+ggplot(Big_3, aes(year, rolling_gs_win_rate)) +
+  geom_line(aes(color = player)) +
+  scale_color_manual(values = c("Blue", "Green", "Orange")) +
+  labs(
+    x = "Year",
+    y = "Grand Slam Win Rate",
+    color = "Player",
+    title = "3-Year Average Annual Grand Slam Win Rate",
+    subtitle = "Every year from 2003 - 2022") +
+  theme_minimal()
+```
+
+
+
+```{r}
+ggplot(Big_3, aes(year, rolling_mast_win_rate)) +
+  geom_line(aes(color = player)) +
+  scale_color_manual(values = c("Blue", "Green", "Orange")) +
+  labs(
+    x = "Year",
+    y = "Masters Win Rate",
+    color = "Player",
+    title = "3-Year Average Annual Masters Win Rate",
+    subtitle = "Every year from 2003 - 2022") +
+  theme_minimal()
+```
+
+
+
+```{r}
+ggplot(Big_3, aes(year, rolling_title_win_rate)) +
+  geom_line(aes(color = player)) +
+  scale_color_manual(values = c("Blue", "Green", "Orange")) +
+  labs(
+    x = "Year",
+    y = "Title Win Rate",
+    color = "Player",
+    title = "3-Year Average Annual Title Win Rate",
+    subtitle = "Every year from 2003 - 2022") +
+  theme_minimal()
+```
