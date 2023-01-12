@@ -93,3 +93,18 @@ ggplot(Big_3, aes(year, rolling_title_win_rate)) +
     subtitle = "Every year from 2003 - 2022") +
   theme_minimal()
 ```
+
+
+
+```{r}
+ggplot(Big_3, aes(year, h2h_win_rate)) +
+  geom_line(aes(color = player)) +
+  scale_color_manual(values = c("Blue", "Green", "Orange")) +
+  labs(
+    x = "Year",
+    y = "H2H Win Rate",
+    color = "Player",
+    title = "Annual Big 3 Head to Head Win Rate",
+    subtitle = "Every year from 2003 - 2022") +
+  theme_minimal()
+```
