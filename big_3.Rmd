@@ -107,4 +107,21 @@ ggplot(Big_3, aes(year, h2h_win_rate)) +
     title = "Annual Big 3 Head to Head Win Rate",
     subtitle = "Every year from 2003 - 2022") +
   theme_minimal()
+
+
+```
+
+
+
+```{r}
+ggplot(Big_3, aes(year, gs_no_nadal)) +
+  geom_line(data = subset(Big_3, player =="Federer"), stat = "identity") +
+  scale_color_manual(values = c("Blue", "Green")) +
+  labs(
+    x = "Year",
+    y = "Grand Slams Won",
+    color = "Player",
+    title = "Big 3 Annual Grand Slam Haul With No Nadal",
+    subtitle = "Every year from 2003 - 2022") +
+  theme_minimal()
 ```
