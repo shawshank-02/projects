@@ -37,6 +37,34 @@ ggplot(Big_3, aes(year, gs_won)) +
     subtitle = "Every year from 2003 - 2022") +
   theme_minimal()
 ```
+
+
+```{r, echo = FALSE}
+ggplot(Big_3, aes(year, mast_won)) +
+  geom_line(aes(color = player)) +
+  scale_color_manual(values = c("Blue", "Green", "Orange")) +
+  labs(
+    x = "Year",
+    y = "Number of Masters",
+    color = "Player",
+    title = "Annual Masters 1000 Haul",
+    subtitle = "Every year from 2003 - 2022") +
+  theme_minimal()
+```
+
+
+```{r, echo = FALSE}
+ggplot(Big_3, aes(year, titles_won)) +
+  geom_line(aes(color = player)) +
+  scale_color_manual(values = c("Blue", "Green", "Orange")) +
+  labs(
+    x = "Year",
+    y = "Number of Titles",
+    color = "Player",
+    title = "Annual Title Haul",
+    subtitle = "Every year from 2003 - 2022") +
+  theme_minimal()
+```
 ```{r, echo = FALSE}
 ggplot(Big_3, aes(year, rolling_gs_avg)) +
   geom_line(aes(color = player)) +
@@ -46,6 +74,34 @@ ggplot(Big_3, aes(year, rolling_gs_avg)) +
     y = "Number of Grand Slams",
     color = "Player",
     title = "3-Year Average Annual Grand Slam Haul",
+    subtitle = "Every year from 2003 - 2022") +
+  theme_minimal()
+```
+
+
+```{r, echo = FALSE}
+ggplot(Big_3, aes(year, rolling_mast_avg)) +
+  geom_line(aes(color = player)) +
+  scale_color_manual(values = c("Blue", "Green", "Orange")) +
+  labs(
+    x = "Year",
+    y = "Number of Grand Slams",
+    color = "Player",
+    title = "3-Year Average Annual Masters 1000 Haul",
+    subtitle = "Every year from 2003 - 2022") +
+  theme_minimal()
+```
+
+
+```{r, echo = FALSE}
+ggplot(Big_3, aes(year, rolling_title_avg)) +
+  geom_line(aes(color = player)) +
+  scale_color_manual(values = c("Blue", "Green", "Orange")) +
+  labs(
+    x = "Year",
+    y = "Number of Grand Slams",
+    color = "Player",
+    title = "3-Year Average Annual Title Haul",
     subtitle = "Every year from 2003 - 2022") +
   theme_minimal()
 ```
@@ -169,3 +225,43 @@ ggplot(Big_3[Big_3$player %in% c("Nadal", "Federer"),], aes(year, gs_no_djokovic
     subtitle = "Every year from 2003 - 2022") +
   theme_minimal()
 ```
+
+
+
+```{r, echo = FALSE}
+ggplot(Big_3[Big_3$player %in% c("Federer", "Djokovic"),], aes(year, rolling_gs_avg_no_nadal)) +
+  geom_line(aes(color = player)) +
+  scale_color_manual(values = c("Blue", "Green")) +
+  labs(
+    x = "Year",
+    y = "Grand Slams Won",
+    color = "Player",
+    title = "Federer and Djokovic 3-Year Average Annual Grand Slam Haul With No Nadal",
+    subtitle = "Every year from 2003 - 2022") +
+  theme_minimal()
+```
+```{r, echo = FALSE}
+ggplot(Big_3[Big_3$player %in% c("Nadal", "Djokovic"),], aes(year, rolling_gs_avg_no_federer)) +
+  geom_line(aes(color = player)) +
+  scale_color_manual(values = c("Blue", "Orange")) +
+  labs(
+    x = "Year",
+    y = "Grand Slams Won",
+    color = "Player",
+    title = "Nadal and Djokovic 3-Year Average Annual Grand Slam Haul With No Federer",
+    subtitle = "Every year from 2003 - 2022") +
+  theme_minimal()
+```
+```{r, echo = FALSE}
+ggplot(Big_3[Big_3$player %in% c("Nadal", "Federer"),], aes(year, rolling_gs_avg_no_djokovic)) +
+  geom_line(aes(color = player)) +
+  scale_color_manual(values = c("Green", "Orange")) +
+  labs(
+    x = "Year",
+    y = "Grand Slams Won",
+    color = "Player",
+    title = "Federer and Nadal Annual Grand Slam Haul With No Djokovic",
+    subtitle = "Every year from 2003 - 2022") +
+  theme_minimal()
+```
+
