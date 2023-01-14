@@ -236,7 +236,7 @@ ggplot(Big_3[Big_3$player %in% c("Federer", "Djokovic"),], aes(year, rolling_gs_
     x = "Year",
     y = "Grand Slams Won",
     color = "Player",
-    title = "Federer and Djokovic 3-Year Average Annual Grand Slam Haul With No Nadal",
+    title = "Federer and Djokovic 3-Year Average Grand Slam Haul With No Nadal",
     subtitle = "Every year from 2003 - 2022") +
   theme_minimal()
 ```
@@ -248,7 +248,7 @@ ggplot(Big_3[Big_3$player %in% c("Nadal", "Djokovic"),], aes(year, rolling_gs_av
     x = "Year",
     y = "Grand Slams Won",
     color = "Player",
-    title = "Nadal and Djokovic 3-Year Average Annual Grand Slam Haul With No Federer",
+    title = "Nadal and Djokovic 3-Year Average Grand Slam Haul With No Federer",
     subtitle = "Every year from 2003 - 2022") +
   theme_minimal()
 ```
@@ -260,7 +260,7 @@ ggplot(Big_3[Big_3$player %in% c("Nadal", "Federer"),], aes(year, rolling_gs_avg
     x = "Year",
     y = "Grand Slams Won",
     color = "Player",
-    title = "Federer and Nadal Annual Grand Slam Haul With No Djokovic",
+    title = "Federer and Nadal 3-Year Average Grand Slam Haul With No Djokovic",
     subtitle = "Every year from 2003 - 2022") +
   theme_minimal()
 ```
