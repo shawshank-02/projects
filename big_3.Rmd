@@ -85,7 +85,7 @@ ggplot(Big_3, aes(year, rolling_mast_avg)) +
   scale_color_manual(values = c("Blue", "Green", "Orange")) +
   labs(
     x = "Year",
-    y = "Number of Grand Slams",
+    y = "Number of Masters",
     color = "Player",
     title = "3-Year Average Annual Masters 1000 Haul",
     subtitle = "Every year from 2003 - 2022") +
@@ -99,7 +99,7 @@ ggplot(Big_3, aes(year, rolling_title_avg)) +
   scale_color_manual(values = c("Blue", "Green", "Orange")) +
   labs(
     x = "Year",
-    y = "Number of Grand Slams",
+    y = "Number of Titles",
     color = "Player",
     title = "3-Year Average Annual Title Haul",
     subtitle = "Every year from 2003 - 2022") +
