@@ -1,8 +1,10 @@
 ---
-title: "Analysing Tennis's Big 3"
+title: "**Analysing Tennis's Big 3**"
+subtitle: "Comparing the achievements of Federer, Nadal, and Djokovic using various metrics and visualisations in order to obtain insights into their rivalry"
 author: "Callan Pringle"
 date: "2023-01-11"
 output: pdf_document
+toc: true
 ---
 
 ```{r setup, include=FALSE, echo = FALSE}
@@ -16,6 +18,8 @@ library(tidyverse)
 library(tibble)
 library(ggplot2)
 library(readxl)
+library(tinytex)
+library(prettydoc)
 ```
 
 
@@ -24,6 +28,29 @@ Big_3 <- read_excel('C:\\Users\\calla\\Desktop\\Github\\Big_3.xlsx')
 ```
 
 
+# Introduction
+The subject surrounding the top of men's tennis over the last ten years has been the so-called "Big 3". Roger Federer, Rafael Nadal, and Novak Djokovic have held an unprecedented grip over the men's game since 2004 when Roger Federer won three out of four Grand Slams. Since the beginning of 2004, 62/75 of all Grand Slams have been won by one of these three undisputed all-time greats. The prolonged rivalry these men have enjoyed has seen all of them rise to the top of all-time debates in the eyes of most tennis fans. 
+
+Despite succeeding iconic rivalries such as the all-American pair Andre Agassi and Pete Sampras, the popular 80s clash between Stefan Edberg and Boris Becker, and the classic Jimmy Connors and Bjorn Borg, their rivalry stands a level above in the pantheon of the sport. They have redefined the definition of greatness in tennis by achieving levels of sustained success never before witnessed. For simple context, when Federer took a stranglehold of the sport in 2004, he was overthrowing the reign of Pete Sampras who at that time boasted an all-time leading fourteen Grand Slams. Now each of the "Big 3" boast tallies that have relegated Sampras's previous record to a level below them: Nadal (22), Djokovic (21), and Federer(20). This is essentially the key to their unmatched reputations: they achieved this while playing against the other two. Imagine breaking all-time records in an individual sport all while playing against the other two best of all time. This is what each of these three men have done.
+
+Naturally, as fans have watched these greats fight eachother for titles over the last decade-and-a-half, each have garnered dedicated supported and stoked a debate around *who* is the greatest of all-time. I will first start by revealing my own bias and perspective on the matter, as is only fair to the reader. Since 2008, I have been a die-hard Rafael Nadal fan. In fact, I would go as far as to say that he is my favourite sportsman/woman of all-time which is something I do not anticipate changing in the foreseeable future. Secondly, and perhaps surprisingly, I have always vehemently argue that it is impossible to recognise a "GOAT". "GOAT" debates are challenging or impossible to make for any sensible sports fan at the best of times, however, that does not mean it is not fun to compare and contemplate hypothetical scenarios and match-ups. This is one of the joys of sport and one that I am happy to admit I partake in.
+
+In the spirit of making comparisons and contemplating hypothetical scenarios, for some time I have wanted to do so in the case of the "Big 3". What I intend to do in the following piece of work, is attempt to visualise this rivalry in a way that I as a fan of the sport and these players haven't seen. Not with the agenda of finding evidence in favour of one over the other, but to learn more about the dynamics of this era and challenge my own preconceptions about their reign over tennis. 
+
+
+# Visualising Dominance using Tournament Success
+The most referenced metric when comparing the "Big 3" is the number of Grand Slams they have won, to the point where we now have a so-called "Grand Slam Race". This is a very legitimate factor when evaluating the legacy and respective dominance of these players. In fact, one of the first ways in which I outlined the dominance of the "Big 3" was their stranglehold on Grand Slam titles since 2004. Further, it is widely recognised and acknowledged by the players themselves that Grand Slams are their top priority, particularly as they age and their bodies are unable to maintain their once rigorous schedules that are required to compete for rankings.
+Despite the relative importance of Grand Slams, I also elected to include visualisations describing their successes in ATP Masters 1000 tournaments, known as ATP Masters Series tournaments prior to 2009. I also include title wins in general which includes all ATP tournaments 250, 500, and 1000, as well as Olympic singles titles, ATP End of Tour Finals, and Grand Slams. This was with the aim of providing a more complete picture. Grand Slams may be the highlight of the calendar, however, the tennis calendar is full throughout the year and visualising success in relatively smaller events can provide insight on dominance and robustness of each player. As they age, we would expect them to compete in less tournaments over time, but it also may show that despite dominance in Grand Slams they were relatively not as dominant throughtout the rest of the tennis calendar.
+
+
+## Comparing Annual Trophy Hauls over Time
+When I first approached the topic of visualising the dominance of Federer, Nadal, and Djokovic, the immediate solution was plotting how many Grand Slams each player won in each year. In order to obtain a clearer picture, I also included the same visualisation for Masters 1000 tournaments and titles. 
+
+Observing the annual Grand Slam success over time, it does start to give us a picture of dominance and success. As clearly seen, Federer enjoys a period of dominant success until 2007, and after this point, never hits the heights he enjoyed in this period. In fact, by the end of 2007, Federer had won 60% of his career total Grand Slams.
+
+In 2008, Nadal sees a brief window of dominance that he does not maintain. However, from 2005, when he wins his first major, he is incredibly consistent to date with only two years featuring no wins. This is in large part due to his well documented and unparalleled dominance on clay, which has seen him win the French Open on a staggering fourteen occasions.
+
+Since 2011, Djokovic has been the most consistent in terms of Grand Slam wins and the data shows him winning three Grand Slams on three separate occasions. However, this success is by no means dominant and absolute. In fact, in this time he only wins more majors than anyone else on five occasions. His consistency is undeniable, however, there is enough success from Federer and in particular Nadal over this time for this to necessarily defined as "Djokovic's Era".
 
 ```{r, echo = FALSE}
 ggplot(Big_3, aes(year, gs_won)) +
@@ -37,7 +64,11 @@ ggplot(Big_3, aes(year, gs_won)) +
     subtitle = "Every year from 2003 - 2022") +
   theme_minimal()
 ```
+It is interesting to observe dominance on the Masters 1000 circuit, especially in comparison the Grand Slams. They are the next highest level of competition on the ATP Tour and there are nine annual events. Players put varying importance on these events, for example, Djokovic has stated it as a goal to have won all nine which he has duly managed to do. However, I do not believe that it is fair to use this against him when comparing this success the Federer and Nadal, as this is definitely something that both men would want to have on their resume, although neither have managed.
 
+Federer in fact wins his first Masters 1000 in 2022, which is not included in this graph. The graph shows that despite his unmatched dominancein Grand Slams, he does not achieve the same dominance during this time at Master 1000 tournaments. There are potentially a number of reasons for this, one being how many he actually competed in over time. This will be addressed in a later section. Another potential reason is that his dominance was perhaps not as absolute as his Grand Slam wins would suggest, and that Nadal was very close to his level. Another, and perhaps likely reason may be the weighting of surfaces difference from Grand Slams. There is not a single Master 1000 played on grass, Federer's favoured surface winning eight Wimbledon titles. Until 2009, four of the nine were played on Clay, which has historically been Federer's worst surface and incidentally, Nadal's best. This likely leads to a bias in Nadal's success over this time. What is illustrated by the data is that Federer is less successful than Nadal and Djokovic at Masters 1000 tournaments after 2006.
+
+From 2005 to 2013, Nadal wins 26/36 of his career total and is the dominant force in these competitions. 
 
 ```{r, echo = FALSE}
 ggplot(Big_3, aes(year, mast_won)) +
@@ -65,6 +96,10 @@ ggplot(Big_3, aes(year, titles_won)) +
     subtitle = "Every year from 2003 - 2022") +
   theme_minimal()
 ```
+# Visualising Dominance using Rolling Averages
+Despite the fact that there are insights to be obtained by observing annual success, I was unsatisfied by the visualisations. There was a lack of momentum and a way of visualisating periods of success.
+
+
 ```{r, echo = FALSE}
 ggplot(Big_3, aes(year, rolling_gs_avg)) +
   geom_line(aes(color = player)) +
@@ -105,7 +140,7 @@ ggplot(Big_3, aes(year, rolling_title_avg)) +
     subtitle = "Every year from 2003 - 2022") +
   theme_minimal()
 ```
-
+## How do Injuries and Absences Affect the Picture?
 
 
 ```{r, echo = FALSE}
@@ -150,7 +185,7 @@ ggplot(Big_3, aes(year, rolling_title_win_rate)) +
     subtitle = "Every year from 2003 - 2022") +
   theme_minimal()
 ```
-
+# What can Head-to-Head Records Show about Dominance?
 
 
 ```{r, echo = FALSE}
@@ -181,7 +216,8 @@ ggplot(Big_3[Big_3$player == "Djokovic",], aes(year, h2h_total)) +
     subtitle = "Every year from 2006 - 2020") +
   theme_minimal()
 ```
-
+# Comparing Fictional Realities
+## Comparing Hypothetical Grand Slam Hauls in the Absence of Each Player
 
 ```{r, echo = FALSE}
 ggplot(Big_3[Big_3$player %in% c("Federer", "Djokovic"),], aes(year, gs_no_nadal)) +
@@ -225,7 +261,7 @@ ggplot(Big_3[Big_3$player %in% c("Nadal", "Federer"),], aes(year, gs_no_djokovic
     subtitle = "Every year from 2003 - 2022") +
   theme_minimal()
 ```
-
+## Visualising Hypothetical Periods of DOminance in the Absence of Each Player
 
 
 ```{r, echo = FALSE}
