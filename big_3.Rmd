@@ -3,9 +3,12 @@ title: "**Analysing Tennis's Big 3**"
 subtitle: "Comparing the achievements of Federer, Nadal, and Djokovic using various metrics and visualisations in order to obtain insights into their rivalry"
 author: "Callan Pringle"
 date: "2023-01-11"
-output: pdf_document
-toc: true
+output: 
+  pdf_document
 ---
+\newpage
+\tableofcontents
+\newpage
 
 ```{r setup, include=FALSE, echo = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -31,7 +34,7 @@ Big_3 <- read_excel('C:\\Users\\calla\\Desktop\\Github\\Big_3.xlsx')
 # Introduction
 The subject surrounding the top of men's tennis over the last ten years has been the so-called "Big 3". Roger Federer, Rafael Nadal, and Novak Djokovic have held an unprecedented grip over the men's game since 2004 when Roger Federer won three out of four Grand Slams. Since the beginning of 2004, 62/75 of all Grand Slams have been won by one of these three undisputed all-time greats. The prolonged rivalry these men have enjoyed has seen all of them rise to the top of all-time debates in the eyes of most tennis fans. 
 
-Despite succeeding iconic rivalries such as the all-American pair Andre Agassi and Pete Sampras, the popular 80s clash between Stefan Edberg and Boris Becker, and the classic Jimmy Connors and Bjorn Borg, their rivalry stands a level above in the pantheon of the sport. They have redefined the definition of greatness in tennis by achieving levels of sustained success never before witnessed. For simple context, when Federer took a stranglehold of the sport in 2004, he was overthrowing the reign of Pete Sampras who at that time boasted an all-time leading fourteen Grand Slams. Now each of the "Big 3" boast tallies that have relegated Sampras's previous record to a level below them: Nadal (22), Djokovic (21), and Federer(20). This is essentially the key to their unmatched reputations: they achieved this while playing against the other two. Imagine breaking all-time records in an individual sport all while playing against the other two best of all time. This is what each of these three men have done.
+Despite succeeding iconic rivalries such as the all-American pair Andre Agassi and Pete Sampras, the popular 80s clash between Stefan Edberg and Boris Becker, and the classic Jimmy Connors and Bjorn Borg, their rivalry stands a level above in the pantheon of the sport. They have redefined the definition of greatness in tennis by achieving levels of sustained success never before witnessed. For simple context, when Federer took a stranglehold of the sport in 2004, he was overthrowing the reign of Pete Sampras who at that time boasted an all-time leading fourteen Grand Slams. Now each of the "Big 3" boast tallies that have relegated Sampras's previous record to a level below them: Nadal (22), Djokovic (21), and Federer (20). This is essentially the key to their unmatched reputations, and they achieved this while playing against the other two. Imagine breaking all-time records in an individual sport all while playing against the other two best of all time. This is what each of these three men have done.
 
 Naturally, as fans have watched these greats fight eachother for titles over the last decade-and-a-half, each have garnered dedicated supported and stoked a debate around *who* is the greatest of all-time. I will first start by revealing my own bias and perspective on the matter, as is only fair to the reader. Since 2008, I have been a die-hard Rafael Nadal fan. In fact, I would go as far as to say that he is my favourite sportsman/woman of all-time which is something I do not anticipate changing in the foreseeable future. Secondly, and perhaps surprisingly, I have always vehemently argue that it is impossible to recognise a "GOAT". "GOAT" debates are challenging or impossible to make for any sensible sports fan at the best of times, however, that does not mean it is not fun to compare and contemplate hypothetical scenarios and match-ups. This is one of the joys of sport and one that I am happy to admit I partake in.
 
@@ -52,7 +55,8 @@ In 2008, Nadal sees a brief window of dominance that he does not maintain. Howev
 
 Since 2011, Djokovic has been the most consistent in terms of Grand Slam wins and the data shows him winning three Grand Slams on three separate occasions. However, this success is by no means dominant and absolute. In fact, in this time he only wins more majors than anyone else on five occasions. His consistency is undeniable, however, there is enough success from Federer and in particular Nadal over this time for this to necessarily defined as "Djokovic's Era".
 
-```{r, echo = FALSE}
+
+```{r echo = FALSE}
 ggplot(Big_3, aes(year, gs_won)) +
   geom_line(aes(color = player)) +
   scale_color_manual(values = c("Blue", "Green", "Orange")) +
@@ -64,11 +68,15 @@ ggplot(Big_3, aes(year, gs_won)) +
     subtitle = "Every year from 2003 - 2022") +
   theme_minimal()
 ```
+
 It is interesting to observe dominance on the Masters 1000 circuit, especially in comparison the Grand Slams. They are the next highest level of competition on the ATP Tour and there are nine annual events. Players put varying importance on these events, for example, Djokovic has stated it as a goal to have won all nine which he has duly managed to do. However, I do not believe that it is fair to use this against him when comparing this success the Federer and Nadal, as this is definitely something that both men would want to have on their resume, although neither have managed.
 
 Federer in fact wins his first Masters 1000 in 2022, which is not included in this graph. The graph shows that despite his unmatched dominancein Grand Slams, he does not achieve the same dominance during this time at Master 1000 tournaments. There are potentially a number of reasons for this, one being how many he actually competed in over time. This will be addressed in a later section. Another potential reason is that his dominance was perhaps not as absolute as his Grand Slam wins would suggest, and that Nadal was very close to his level. Another, and perhaps likely reason may be the weighting of surfaces difference from Grand Slams. There is not a single Master 1000 played on grass, Federer's favoured surface winning eight Wimbledon titles. Until 2009, four of the nine were played on Clay, which has historically been Federer's worst surface and incidentally, Nadal's best. This likely leads to a bias in Nadal's success over this time. What is illustrated by the data is that Federer is less successful than Nadal and Djokovic at Masters 1000 tournaments after 2006.
 
-From 2005 to 2013, Nadal wins 26/36 of his career total and is the dominant force in these competitions. 
+From 2005 to 2013, Nadal wins 26/36 of his career total and is the dominant force in these competitions. However, due to some persistent injuries including a serious knee problem in 2012 and a back issue that saw him retire in the Australian Open final in 2014. Following these challenges, Nadal clearly starts to reduce his schedule in order to prioritise playing in the biggest events. It is also worth pointing out that out of the 36 Masters 1000 titles he has, only 9 have not been won on clay. This is despite the majority of Master 1000s being played on hard courts.
+
+
+What is clear to see from the graph is that of everyone in the Big 3, Djokovic has been the most dominant in Masters 1000 tournaments. As previously mentioned, he is the only man ever to have won all nine, he has also managed a high of six in one calendar which is an unmatched feat. This is undoubtedly a feather in his cap, dominance goes beyond Grand Slams and here he is shown to be successful in a more consistent nature throughout a period of time. The one point to keep in mind, however, just as used to bring context to the performance of Federer and Nadal, for most of Djokovic's career, two thirds of all Masters 1000 events have been held on hard court. This is his favoured surface and the surface on which he is widely considered the best ever.
 
 ```{r, echo = FALSE}
 ggplot(Big_3, aes(year, mast_won)) +
@@ -96,7 +104,8 @@ ggplot(Big_3, aes(year, titles_won)) +
     subtitle = "Every year from 2003 - 2022") +
   theme_minimal()
 ```
-# Visualising Dominance using Rolling Averages
+## Visualising Dominance using Rolling Averages
+
 Despite the fact that there are insights to be obtained by observing annual success, I was unsatisfied by the visualisations. There was a lack of momentum and a way of visualisating periods of success.
 
 
@@ -216,6 +225,19 @@ ggplot(Big_3[Big_3$player == "Djokovic",], aes(year, h2h_total)) +
     subtitle = "Every year from 2006 - 2020") +
   theme_minimal()
 ```
+```{r, echo = FALSE}
+ggplot(Big_3, aes(year, m_played)) +
+  geom_line(aes(color = player)) +
+  scale_color_manual(values = c("Blue", "Green", "Orange")) +
+  labs(
+    x = "Year",
+    y = "Matches Played",
+    color = "Player",
+    title = "Big 3 Matches Played Each Year",
+    subtitle = "Every year from 2003 - 2022") +
+  theme_minimal()
+```
+
 # Comparing Fictional Realities
 ## Comparing Hypothetical Grand Slam Hauls in the Absence of Each Player
 
