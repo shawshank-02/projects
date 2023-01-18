@@ -104,6 +104,7 @@ ggplot(Big_3, aes(year, titles_won)) +
     subtitle = "Every year from 2003 - 2022") +
   theme_minimal()
 ```
+
 ## Visualising Dominance using Rolling Averages
 
 Despite the fact that there are insights to be obtained by observing annual success, I was unsatisfied by the visualisations. There was a lack of momentum and a way of visualisating periods of success.
@@ -149,6 +150,7 @@ ggplot(Big_3, aes(year, rolling_title_avg)) +
     subtitle = "Every year from 2003 - 2022") +
   theme_minimal()
 ```
+
 ## How do Injuries and Absences Affect the Picture?
 
 
@@ -194,6 +196,7 @@ ggplot(Big_3, aes(year, rolling_title_win_rate)) +
     subtitle = "Every year from 2003 - 2022") +
   theme_minimal()
 ```
+
 # What can Head-to-Head Records Show about Dominance?
 
 
@@ -239,6 +242,7 @@ ggplot(Big_3, aes(year, m_played)) +
 ```
 
 # Comparing Fictional Realities
+
 ## Comparing Hypothetical Grand Slam Hauls in the Absence of Each Player
 
 ```{r, echo = FALSE}
@@ -283,6 +287,7 @@ ggplot(Big_3[Big_3$player %in% c("Nadal", "Federer"),], aes(year, gs_no_djokovic
     subtitle = "Every year from 2003 - 2022") +
   theme_minimal()
 ```
+
 ## Visualising Hypothetical Periods of DOminance in the Absence of Each Player
 
 
