@@ -136,7 +136,7 @@ ggplot(Big_3, aes(year, rolling_gs_avg)) +
   theme_minimal()
 ```
 
-Using the same metric but for Masters 1000s events, we see again that Federer has early dominance but this drops off quickly and is first replaced by a very consistently dominant Nadal. However, the starkest fact displayed on this graph is that Djokovic has undeniably had the most dominance over these events. The levels at which he maintains success in the 'mid-2010s' is unmatched. He deserves to be recognised for this. The Masters circuit is highly competitive, featuring Grand Slam level competition, and has a long calendar - indicating his robustness and consistency as an athlete over this time.
+Using the same metric but for Masters 1000s events, we see again that Federer has early dominance but this drops off quickly and is first replaced by a very consistently dominant Nadal. However, the starkest fact displayed on this graph is that Djokovic has undeniably had the most dominance over these events. The levels at which he maintains success in the mid-2010s is unmatched. He deserves to be recognised for this. The Masters circuit is highly competitive, featuring Grand Slam level competition, and has a long calendar - indicating his robustness and consistency as an athlete over this time.
 
 Over the entire period, Nadal maintains a consistently higher ouput than Federer. Federer's dominance on the Masters circuit appears to end in 2008 and he never reclaims this. Is this perhaps an indication that despite his Grand Slam success, he wasn't dominant for a sustained period of time and struggled for consistent success after the establishment of Rafa and Novak as threats?
 
@@ -153,7 +153,7 @@ ggplot(Big_3, aes(year, rolling_mast_avg)) +
   theme_minimal()
 ```
 
-
+The picture the rolling average of titles paints shows that previously shown absolute dominance from Federer, however, here there is no definite period of Nadal dominance. There appears to be more of a transition period at the turn of the decade before Djokovic dominates most of the 2010s. This dominance does subside in 2018, and all three operate at a noticeably lower level than they did prior. In this measure more than other previously, Federer operates at a similar level to Nadal as opposed to Nadal having clear dominance over this period which we see in other metrics.
 
 ```{r, echo = FALSE}
 ggplot(Big_3, aes(year, rolling_title_avg)) +
@@ -170,6 +170,17 @@ ggplot(Big_3, aes(year, rolling_title_avg)) +
 
 ## How do Injuries and Absences Affect the Picture?
 
+Any debate around Federer, Nadal and Djokovic inevitably references their respective injuries (or lack thereof) and the what-ifs if events had unfolded more favourably in terms of fitness. As a Nadal fan, this has been a painfully recurrent issue for him as an athlete but all three have suffered at various stages of their careers. 
+
+To account for absences I have taken the rolling 3-year average of annual wins but adjusted it to be a win rate, rather than taking the count of success in each year. With this I hope to capture how dominant each player was by showing how many tournaments they won of those they entered on a 3-year rolling average basis. We can compare these to the figures above to observe if there are any noticeable changes when accounting for participation.
+
+First, observing Grand Slam win rate, the general variations are similar. Once again, Federer's success in the mid-2000s is unmatched and for a period of two years, he was winning nearly 2/3 Grand Slams he competed in. The key difference when accounting for absence is that Rafa enjoyed a longer period of dominance in the beginning of the 2010s and it takes longer for Djokovic to reach the top. On this visualisation, Djokovic also has a short period of dominance and Federer's resurgence is stronger. This indicates that Federer was competing in less Grand Slams but was very effective at the tournaments he competed in.
+
+It is clear to see that when accounting for absence that this penalises Djokovic relative to the others. It is important to point out that some of his success was in periods where Nadal and Federer were less consistently active. However, I do not believe that this should diminish his success. I believe that the legacy of an athlete should partially be how effective they were at competing at the highest level for a long period of time. Robustness shouldn't be a caveat in Djokovic's legacy but instead a defining factor of what makes him arguabloy the greatest of all time.
+
+Similarly, a player such as Nadal should not be penalised for his injuries. These have been a simple reality of his career from the beginning. He didn't play in the 2004 Roland Garros due to a foot injury that was still giving him grief in 2022. What this graph highlights is that when he was fit enough to compete, he had an extended period of being the best in Grand Slams. Although to say he would have won more had he been more available is a null argument in my opinion. Perhaps the foregoing of the physical cost he incurred achieving his success would have resulted in less of it. And the consequences with respect to his longevity may be justified in the height of success he managed to achieve. 
+
+What this starts to illustrate is a complex timeline of dynamics and changes that make it impossible for me to elevate one's legacy above the other. 
 
 ```{r, echo = FALSE}
 ggplot(Big_3, aes(year, rolling_gs_win_rate)) +
@@ -184,7 +195,9 @@ ggplot(Big_3, aes(year, rolling_gs_win_rate)) +
   theme_minimal()
 ```
 
+Next, considering the win rate on the Masters circuit, we picture changes considerably. Now, Federer once again achieves the greatest single height of success, as we have seen in other measures. Indicating that his lack of competing affected his success on the circuit rather than his dominance as a player over this time. This gives further support to the view that his dominance in this period is the most dominant tennis player ever. Although, as seen below, Djokovic enjoyed more sustained success at this level over the 2010s. But it must be noted than when we account for absence, this period is less absolutely dominant in comparison to the previous 3-year rolling average of annual wins.
 
+Unlike the other two, Nadal never reaches dizzying heights in his Masters successes but his consistency is commendable. He overtakes Federer before 2010 and maintains a consistently higher level of success than him for the most part after this point. Nadal's consistency on the Master circuit, much like on the Grand Slam circuit, it primarily attributed to his perennial dominance on the clay court season. As an eleven time winner at Monte Carlo and a ten time winner in Rome, he maintained consistent success on the Master circuit.
 
 ```{r, echo = FALSE}
 ggplot(Big_3, aes(year, rolling_mast_win_rate)) +
@@ -199,7 +212,7 @@ ggplot(Big_3, aes(year, rolling_mast_win_rate)) +
   theme_minimal()
 ```
 
-
+Looking at tournament win rate below on a 3-year rolling average basis, we once again see unmathced dominance by Federer, before a transition period leading into Djokovic dominant. Similar to the previous figure, Nadal never hits the heights of Federer and Djokovic on titles won but he operates at a very consistent level. This win rate graph doesn't seems to differ significantly from the 3-year rolling average of annual hauls. There is the same initial height of Federer dominance, after which he and Rafa have similar levels of success. While for a period in the 2010s, Djokovic elevates himself above both of them before falling to the level Federer and Nadal had maintained throughout the decade.
 
 ```{r, echo = FALSE}
 ggplot(Big_3, aes(year, rolling_title_win_rate)) +
@@ -305,7 +318,7 @@ ggplot(Big_3[Big_3$player %in% c("Nadal", "Federer"),], aes(year, gs_no_djokovic
   theme_minimal()
 ```
 
-## Visualising Hypothetical Periods of DOminance in the Absence of Each Player
+## Visualising Hypothetical Periods of Dominance in the Absence of Each Player
 
 
 ```{r, echo = FALSE}
