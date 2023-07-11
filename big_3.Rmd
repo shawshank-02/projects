@@ -212,7 +212,9 @@ ggplot(Big_3, aes(year, rolling_mast_win_rate)) +
   theme_minimal()
 ```
 
-Looking at tournament win rate below on a 3-year rolling average basis, we once again see unmathced dominance by Federer, before a transition period leading into Djokovic dominant. Similar to the previous figure, Nadal never hits the heights of Federer and Djokovic on titles won but he operates at a very consistent level. This win rate graph doesn't seems to differ significantly from the 3-year rolling average of annual hauls. There is the same initial height of Federer dominance, after which he and Rafa have similar levels of success. While for a period in the 2010s, Djokovic elevates himself above both of them before falling to the level Federer and Nadal had maintained throughout the decade.
+Looking at tournament win rate below on a 3-year rolling average basis, we once again see unmatched dominance by Federer, before a transition period leading into Djokovic dominance. Similar to the previous figure, Nadal never hits the heights of Federer and Djokovic on titles won but he operates at a very consistent level. This win rate graph doesn't seems to differ significantly from the 3-year rolling average of annual hauls. There is the same initial height of Federer dominance, after which he and Rafa have similar levels of success. While for a period in the 2010s, Djokovic elevates himself above both of them before falling to the level Federer and Nadal had maintained throughout the decade.
+
+This figure raises the question
 
 ```{r, echo = FALSE}
 ggplot(Big_3, aes(year, rolling_title_win_rate)) +
@@ -229,6 +231,9 @@ ggplot(Big_3, aes(year, rolling_title_win_rate)) +
 
 # What can Head-to-Head Records Show about Dominance?
 
+Rafael Nadal and Novak Djokovic have faced eachother 59 times with the record standing at 29-30. Federer and Nadal have played 40 times with the record at 16-24. Novak and Roger have stood across from one another 50 times with a head-to-head of 27-23.
+
+These three rivalries are the sport's largest by matches played. With Lendl-McEnroe sitting in fourth with 36 matches played. Therefore, we have as much data as one could ask for in an individual sport in order to compare them. It must be acknowledged that this analysis is relatively superficial. The wealth of variables at play match to match between these three greats are significant. This section warrants it's own deep dive analysis, however, as one part of this research I hope to capture some high level themes and perhaps intrigue the reader to do their own investigation to form their opinions. This is just a starting point, but without further prefacing - let's delve in!
 
 ```{r, echo = FALSE}
 ggplot(Big_3, aes(year, h2h_win_rate)) +
@@ -242,10 +247,17 @@ ggplot(Big_3, aes(year, h2h_win_rate)) +
     title = "Annual Big 3 Head to Head Win Rate",
     subtitle = "Every year from 2006 - 2020") +
   theme_minimal()
-
-
 ```
 
+When debating who is the best out of these three, their periods dominance over one another are sometimes mentioned. These conversations generally make reference to the surfaces and sometimes head-to-head records in specific scenarios such as Grand Slams. Above, is a visualisation of each individual's dominance over the other two which can show who dominated the 'Big 3' in any given year.
+
+Initially, Djokovic is not operating at the level of Rafa and Roger and this is clearly shown in the graph. However, it does not take him long to start competing with them and in 2009, he has a combined 50% win rate against the other two. In this year he plays twelve 'Big 3' matches - seven against Nadal and five against Federer. This marks the beginning of his ascension to the top of the game. By the end of 2007, he was ranked third and maintained this until he broke the Rafa-Roger dominance to reach second in early 2010.
+
+His first year 'dominating' the 'Big 3' was 2011. No surprises there! He also does this in 2015, 2016, 2018 and 2020. This may be a surprisingly low number of years of dominance. The 2010s are widely considered his era. But then why during them does he only dominate his rivals in four years? Do Federer and Nadal fans have an argument about availability playing a factor? Does this add some context to the numbers he put up over this period?
+
+Well, four out of ten is still a majority. Additionally, he is jointly dominant in 2014 with the other two. It is also worth mentioning that using the graph below, we can see that in 2011 and 2015, there are the second and fourth most 'Big 3' head-to-heads. So he has dominated half of the top four years in terms of 'Big 3' match ups.
+
+Who then, won the other two: 2007 and 2009? Well unlike 2011 and 2015, it was actually quite close! In 2011, eeks Nadal and in 2009, Nadal tops the metric with Novak and Roger not far behind. What is noticeable about the graph above is that there is a significant drop off in terms of the activity of the 'Big 3' rivalry after 2015. From 2006 - 2015, close there are a minimum of nine of these matches every year with a maximum of sixteen in 2007. Numbers that we just don't see after that.
 
 ```{r, echo = FALSE}
 ggplot(Big_3[Big_3$player == "Djokovic",], aes(year, h2h_total)) +
@@ -258,6 +270,13 @@ ggplot(Big_3[Big_3$player == "Djokovic",], aes(year, h2h_total)) +
     subtitle = "Every year from 2006 - 2020") +
   theme_minimal()
 ```
+
+Nadal dominates six years: 2006, 2008, 2009, 2010, 2012 and 2013. This is more than the other manage over this period with Federer having only two years of absolute dominance. This presents a perspective that illustrates a point that many Rafa fans would like you to know: that on a head-to-head basis, he has the edge and at the very least cannot be argued over. I would also be remiss to omit his record against Novak and Roger in Grand Slams which are 11-7 and 10-4, respectively. Removing Roland Garros these are 3-5 and 4-4, respectively. Not dominant, but considering these are records against the greatest of all time on hard and grass courts, that's not a bad record at all.
+
+What stands out from this win rate graph for Rafa are two predominant trends. Namely 2006-2013 and 2013-2020. The first half of this 'Big 3' era, he dominates this metric, leading it 6/8 years. However, if you were to listen to him talk during this period or others discussing this era, Federer was the man. Does this indicate that this sentiment was not entirely acurrate? Is this Rafa's era more than others (including Rafa himself) would have you believe?
+
+What I believe prevents this from being Nadal's era is a number of factors. Firstly, the tennis world at this time is in awe of Federer, and for good reason. We illustrated earlier his unprecedented dominance on the biggest stage
+
 ```{r, echo = FALSE}
 ggplot(Big_3, aes(year, m_played)) +
   geom_line(aes(color = player)) +
@@ -274,6 +293,8 @@ ggplot(Big_3, aes(year, m_played)) +
 # Comparing Fictional Realities
 
 ## Comparing Hypothetical Grand Slam Hauls in the Absence of Each Player
+
+This next section embarks on a somewhat more fantastical exploration of this rivalry. However, despite the fallibility of this particular analysis, it is still an interesting consideration. We are lucky to have fifteen year when these three men competed on the ATP Tour during which they fought for tennis's biggest honours.
 
 ```{r, echo = FALSE}
 ggplot(Big_3[Big_3$player %in% c("Federer", "Djokovic"),], aes(year, gs_no_nadal)) +
