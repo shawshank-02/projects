@@ -2,7 +2,7 @@
 title: "**Analysing Tennis's Big 3**"
 subtitle: "Comparing the achievements of Federer, Nadal, and Djokovic using various metrics and visualisations in order to obtain insights into their rivalry"
 author: "Callan Pringle"
-date: "2023-01-11"
+date: "16-07-2023"
 output: 
   pdf_document
 ---
@@ -32,17 +32,19 @@ Big_3 <- read_excel('C:\\Users\\calla\\Desktop\\Github\\Big_3.xlsx')
 
 
 # Introduction
-The subject surrounding the top of men's tennis over the last ten years has been the so-called "Big 3". Roger Federer, Rafael Nadal, and Novak Djokovic have held an unprecedented grip over the men's game since 2004 when Roger Federer won three out of four Grand Slams. Since Roger Federer won Wimbledon in 2003 to the time of writing this before the French Open in 2023, 64/78 of all Grand Slams have been won by one of these three undisputed all-time greats. The prolonged rivalry these men have enjoyed has seen all of them rise to the top of all-time debates in the eyes of most tennis fans. 
+The subject surrounding the top of men's tennis over the last ten years has been the so-called "Big 3". Roger Federer, Rafael Nadal, and Novak Djokovic have held an unprecedented grip over the men's game since 2004 when Roger Federer won three out of four Grand Slams. Since Roger Federer won Wimbledon in 2003 to the time of writing this before the Wimbledon final in 2023, 64/79 of all Grand Slams have been won by one of these three undisputed all-time greats. The prolonged rivalry these men have enjoyed has seen all of them rise to the top of all-time debates in the eyes of most tennis fans. 
 
-Despite succeeding iconic rivalries such as the all-American pair Andre Agassi and Pete Sampras, the popular 80s clash between Stefan Edberg and Boris Becker, and the classic Jimmy Connors and Bjorn Borg, their rivalry stands a level above in the pantheon of the sport. They have redefined the definition of greatness in tennis by achieving levels of sustained success never before witnessed. For simple context, when Federer took a stranglehold of the sport in 2004, he was overthrowing the reign of Pete Sampras who at that time boasted an all-time leading fourteen Grand Slams. Now each of the "Big 3" boast tallies that have relegated Sampras's previous record to a level below them: Nadal (22), Djokovic (22), and Federer (20). This is essentially the key to their unmatched reputations, and they achieved this while competing against eachother. Imagine breaking all-time records in an individual sport all while playing against the other two best of all time. This is what each of these three men have done.
+Despite succeeding iconic rivalries such as the all-American pair Andre Agassi and Pete Sampras, the popular 80s clash between Stefan Edberg and Boris Becker, and the classic Jimmy Connors and Bjorn Borg, their rivalry stands a level above in the pantheon of the sport. They have redefined the definition of greatness in tennis by achieving levels of sustained success never before witnessed. For simple context, when Federer took a stranglehold of the sport in 2004, he was overthrowing the reign of Pete Sampras who at that time boasted an all-time leading 14 Grand Slams. Now each of the "Big 3" boast tallies that have relegated Sampras's previous record to a level below them: Djokovic (23), Nadal (22), and Federer (20). This is essentially the key to their unmatched reputations, and they achieved this while competing against eachother. Imagine breaking all-time records in an individual sport all while playing against the other two best of all time. This is what each of these three men have done.
 
-Naturally, as fans have watched these greats fight eachother for titles over the last decade-and-a-half, each have garnered dedicated supported and stoked a debate around *who* is the greatest of all-time. I will first start by revealing my own bias and perspective on the matter, as is only fair to the reader. Since 2008, I have been a die-hard Rafael Nadal fan. In fact, I would go as far as to say that he is my favourite sportsman/woman of all-time which is something I do not anticipate changing in the foreseeable future. Secondly, and perhaps surprisingly, I have always vehemently argued that it is impossible to recognise a "GOAT". "GOAT" debates are challenging or impossible to make for any sensible sports fan at the best of times, however, that does not mean it is not fun to compare and contemplate hypothetical scenarios and match-ups. This is one of the joys of sport and one that I am happy to admit I partake in.
+Naturally, as fans have watched these greats fight eachother for titles over the last decade-and-a-half, each have garnered dedicated support and stoked a debate around *who* is the greatest of all-time. I will first start by revealing my own bias and perspective on the matter, as is only fair to the reader. Since 2008, I have been a die-hard Rafael Nadal fan. In fact, I would go as far as to say that he is my favourite sportsman/woman of all-time which is something I do not anticipate changing in the foreseeable future. Secondly, and perhaps surprisingly, I have always vehemently argued that it is impossible to recognise a "GOAT". "GOAT" debates are challenging or impossible to make for any sensible sports fan at the best of times, however, that does not mean it is not fun to compare and contemplate hypothetical scenarios and match-ups. This is one of the joys of sport and one that I am happy to admit I partake in.
 
-In the spirit of making comparisons and contemplating hypothetical scenarios, for some time I have wanted to do so in the case of the "Big 3". What I intend to do in the following piece of work, is attempt to visualise this rivalry in a way that I as a fan of the sport and these players haven't seen. Not with the agenda of finding evidence in favour of one over the other, but to learn more about the dynamics of this era and challenge my own preconceptions about their reign over tennis. 
+In the spirit of making comparisons and contemplating hypothetical scenarios, for some time I have wanted to do so in the case of the "Big 3". What I intend to do in the following piece of work is attempt to visualise this rivalry in a way that I, as a fan of the sport and these players haven't seen. Not with the agenda of finding evidence in favour of one over the other, but to learn more about the dynamics of this era and challenge my own preconceptions about their reign over tennis. 
 
+\newpage
 
 # Visualising Dominance using Tournament Success
 The most referenced metric when comparing the "Big 3" is the number of Grand Slams they have won, to the point where we now have a so-called "Grand Slam Race". This is a very legitimate factor when evaluating the legacy and respective dominance of these players. In fact, one of the first ways in which I outlined the dominance of the "Big 3" was their stranglehold on Grand Slam titles since 2003. Further, it is widely recognised and acknowledged by the players themselves that Grand Slams are their top priority, particularly as they age and their bodies are unable to maintain their once rigorous schedules that are required to compete for rankings.
+
 Despite the relative importance of Grand Slams, I also elected to include visualisations describing their successes in ATP Masters 1000 tournaments (known as ATP Masters Series tournaments prior to 2009). I also include title wins in general which includes all ATP tournaments 250, 500, and 1000, as well as Olympic singles titles, ATP End of Tour Finals, and Grand Slams. This was with the aim of providing a more complete picture. Grand Slams may be the highlight of the calendar, however, the tennis calendar is full throughout the year and visualising success in relatively smaller events can provide insight on the dominance and robustness of each player. As they age, we would expect them to compete in less tournaments over time, but it also may show that despite dominance in Grand Slams they were relatively not as dominant throughtout the rest of the tennis calendar.
 
 
@@ -53,7 +55,7 @@ Observing the annual Grand Slam success over time, it does start to give us a pi
 
 In 2008, Nadal sees a brief window of dominance that he does not maintain. However, from 2005, when he wins his first major, he is incredibly consistent to date with only two years featuring no wins. This is in large part due to his well documented and unparalleled dominance on clay, which has seen him win the French Open on a staggering fourteen occasions.
 
-Since 2011, Djokovic has been the most consistent in terms of Grand Slam wins and the data shows him winning three Grand Slams on three separate occasions. However, this success is by no means dominant and absolute. In fact, in this time he only wins more majors than anyone else on five occasions. His consistency is undeniable, however, there is enough success from Federer and in particular Nadal over this time for this to necessarily defined as "Djokovic's Era".
+Since 2011, Djokovic has been the most consistent in terms of Grand Slam wins and the data shows him winning three Grand Slams on three separate occasions. However, this success is by no means dominant and absolute. In fact, in this time he only wins more majors than anyone else on five occasions. His consistency is undeniable, however, there is enough success from Federer and in particular Nadal over this time for this not to necessarily be defined as "Djokovic's Era", even though there is a strong case.
 
 
 ```{r echo = FALSE}
@@ -65,18 +67,18 @@ ggplot(Big_3, aes(year, gs_won)) +
     y = "Number of Grand Slams",
     color = "Player",
     title = "Annual Grand Slam Haul",
-    subtitle = "Every year from 2003 - 2022") +
+    subtitle = "Every year from 2003 - 2023") +
   theme_minimal()
 ```
 
 It is interesting to observe dominance on the Masters 1000 circuit, especially in comparison the Grand Slams. They are the next highest level of competition on the ATP Tour and there are nine annual events. Players put varying importance on these events, for example, Djokovic has stated it as a goal to have won all nine which he has duly managed to do. However, I do not believe that it is fair to use this against him when comparing this success against Federer and Nadal, as this is definitely something that both would want to have on their resume, although neither have managed.
 
-Federer in fact wins his first Masters 1000 in 2022, which is not included in this graph. The graph shows that despite his unmatched dominance in Grand Slams, he does not achieve the same dominance during this time at Master 1000 tournaments. There are potentially a number of reasons for this, one being how many he actually competed in over time. This will be addressed in a later section. Another potential reason is that his dominance was perhaps not as absolute as his Grand Slam wins would suggest, and that Nadal was very close to his level. Another, and perhaps likely reason may be the weighting of surfaces difference from Grand Slams. There is not a single Master 1000 played on grass, Federer's favoured surface winning eight Wimbledon titles. Until 2009, four of the nine were played on Clay, which has historically been Federer's worst surface and incidentally, Nadal's best. This likely leads to a bias in Nadal's success over this time. What is illustrated by the data is that Federer is less successful than Nadal and Djokovic at Masters 1000 tournaments after 2006.
+Federer in fact wins his first Masters 1000 in 2002, which is not included in this graph. The graph shows that despite his unmatched dominance in Grand Slams, he does not achieve the same dominance during this time at Master 1000 tournaments. There are potentially a number of reasons for this, one being how many he actually competed in over time. This will be addressed in a later section. Another potential reason is that his dominance was perhaps not as absolute as his Grand Slam wins would suggest, and that Nadal was very close to his level. Another, and perhaps likely reason may be that the weighting of surfaces difference from Grand Slams. There is not a single Masters 1000 played on grass, Federer's favoured surface reflected in him winning eight Wimbledon titles. Until 2009, four of the nine were played on Clay, which has historically been Federer's worst surface and incidentally, Nadal's best. This likely leads to a bias in Nadal's success over this time. What is illustrated by the data is that Federer is less successful than Nadal and Djokovic at Masters 1000 tournaments after 2006.
 
 From 2005 to 2013, Nadal wins 26/36 of his career total and is the dominant force in these competitions. However, due to some persistent injuries including a serious knee problem in 2012 and a back issue that saw him retire in the Australian Open final in 2014, Nadal clearly starts to reduce his schedule in order to prioritise playing in the biggest events. It is also worth pointing out that out of the 36 Masters 1000 titles he has, only 9 have not been won on clay. This is despite the majority of Master 1000s being played on hard courts. Again illustrating his dominance on the surface.
 
 
-What is clear to see from the graph is that of everyone in the Big 3, Djokovic has been the most dominant in Masters 1000 tournaments. As previously mentioned, he is the only man ever to have won all nine, he has also managed a high of six in one calendar which is an unmatched feat. This is undoubtedly a feather in his cap, and shows that his dominance goes beyond Grand Slams and here he is shown to be successful in a more consistent nature throughout a period of time. The one point to keep in mind, however, just as used to bring context to the performance of Federer and Nadal, for most of Djokovic's career, two thirds of all Masters 1000 events have been held on hard court. This is his favoured surface and the surface on which he is widely considered the best ever.
+What is clear to see from the graph is that of everyone in the "Big 3", Djokovic has been the most dominant in Masters 1000 tournaments. As previously mentioned, he is the only man ever to have won all nine, he has also managed a high of six in one calendar which is an unmatched feat. This is undoubtedly a feather in his cap, and shows that his dominance goes beyond Grand Slams and here he is shown to be successful in a more consistent nature throughout a period of time. The one point to keep in mind, however, just as used to bring context to the performance of Federer and Nadal, for most of Djokovic's career, two thirds (6 out of 9) of all Masters 1000 events have been held on hard court. This is his favoured surface and the surface on which he is widely considered the best ever.
 
 ```{r, echo = FALSE}
 ggplot(Big_3, aes(year, mast_won)) +
@@ -87,11 +89,11 @@ ggplot(Big_3, aes(year, mast_won)) +
     y = "Number of Masters",
     color = "Player",
     title = "Annual Masters 1000 Haul",
-    subtitle = "Every year from 2003 - 2022") +
+    subtitle = "Every year from 2003 - 2023") +
   theme_minimal()
 ```
 
-As a measure of dominance, total title haul can give us a broader view to the "Big 3's" respective dominance. However, because this count does not weight more prestigious tournaments over lesser wins it is a crude analytical tool. We can observe that all players have similar peaks for titles won in a single year. Federer and Nadal begin the period in a prolific nature but quickly see this gradually decline over time, excluding an outlier from Nadal in 2013 where he shows relative dominance.
+As a measure of dominance, total title haul can give us a broader view to the respective dominance of the "Big 3". However, because this count does not weight more prestigious tournaments over lesser wins it is a crude analytical tool. We can observe that all players have similar peaks for titles won in a single year. Federer and Nadal begin the period in a prolific nature but quickly see this gradually decline over time, excluding an outlier from Nadal in 2013 where he shows relative dominance.
 
 Djokovic does not burst onto the scene as strongly as Federer and Nadal do but is clearly the most dominant player in the first half of the 2010s.After this period, we see all three win titles at a similar and reduced level. This reflects their shift in focus to longevity and therefore not competing in as many tournaments.
 
@@ -104,7 +106,7 @@ ggplot(Big_3, aes(year, titles_won)) +
     y = "Number of Titles",
     color = "Player",
     title = "Annual Title Haul",
-    subtitle = "Every year from 2003 - 2022") +
+    subtitle = "Every year from 2003 - 2023") +
   theme_minimal()
 ```
 
@@ -112,11 +114,11 @@ ggplot(Big_3, aes(year, titles_won)) +
 
 ## Visualising Dominance using Rolling Averages
 
-Despite the fact that there are insights to be obtained by observing annual success, I was unsatisfied by the visualisations. There was a lack of momentum and a way of visualising periods of success. Therefore, I decided to use a 3-year rolling average of their annual Grand Slam hauls. The results surprised me and I believe provide a better picture of the "Big 3's" periods of dominance.
+Despite the fact that there are insights to be obtained by observing annual success, I was unsatisfied by the visualisations. There was a lack of momentum and a way of visualising periods of success. Therefore, I decided to use a 3-year rolling average of their annual Grand Slam hauls. The results surprised me and I believe provide a better picture of the periods of dominance of the "Big 3".
 
-Below may be my favourite visultisation if the entire report. It is simple yet describes so much and provided me with my first new insight of this project: no-one has ever been as Grand Slam dominant as Roger Federer was between 2004 and 2008. A question I have always had as an avid Nadal fan was: 'Why does everyone, including Rafa, call Roger the greatest ever?' I didn'y understand it, ever since I started watching tennis 2008, Nadal was clearly as good as Federer and yet everyone had appeared to so quickly accept that Federer's legacy was unmatched.
+Below may be my favourite visultisation of the entire report. It is simple yet describes so much and provided me with my first new insight of this project: no-one has ever been as Grand Slam dominant as Roger Federer was between 2004 and 2008. A question I have always had as an avid Nadal fan was: 'Why does everyone, including Rafa, call Roger the greatest ever?'. I didn't understand it, ever since I started watching tennis 2008, Nadal was clearly as good as Federer and yet everyone had appeared to so quickly accept that Federer's legacy was unmatched.
 
-This visualation was my first step in understanding why. It is stark how absolutely dominant he was on the biggest stage. Recall when we described the context of how greatness was defined with Pete Sampras holding fourteen Grand Slams. Suddenly, here came this young Swiss phenom that won EVERYTHING. The relative dominance he had at Grand Slams over this period is not even closely matched by Rafa or Novak at any stage according to this measure. This made me consider the question of if you could pick one of these three at their best, would you take Federer over this period? This is often the argument made in other debates such as MJ vs Lebron, that despite the undeniable longevity of Lebron that he never reached the heights of pirme Jordan. Is it the same case here, and we have just forgotten due to our tendency to exhibit 'recency bias'?
+This visualation was my first step in understanding why. It is stark how absolutely dominant he was on the biggest stage. Recall when we described the context of how greatness was defined with Pete Sampras holding fourteen Grand Slams. Suddenly, here came this young Swiss phenom that won EVERYTHING. The relative dominance he had at Grand Slams over this period is not even closely matched by Rafa or Novak at any stage according to this measure. This made me consider the question of if you could pick one of these three at their best, would you take Federer over this period? This is often the argument made in other debates such as MJ vs Lebron, that despite the undeniable longevity of Lebron that he never reached the heights of prime Jordan. Is it the same case here, and we have just forgotten due to our tendency to exhibit 'recency bias'?
 
 There is an obvious argument against this which is that he didn't have to compete against a world class Djokovic or a seasoned Rafael Nadal. The Nadal he was beating during this time was 'up-and-coming', and took time to establish himself as potentially the best in the world. Djokovic wasn't even competing at the top level at the beginning of this period. 
 
@@ -132,7 +134,7 @@ ggplot(Big_3, aes(year, rolling_gs_avg)) +
     y = "Number of Grand Slams",
     color = "Player",
     title = "3-Year Average Annual Grand Slam Haul",
-    subtitle = "Every year from 2003 - 2022") +
+    subtitle = "Every year from 2003 - 2023") +
   theme_minimal()
 ```
 
@@ -149,7 +151,7 @@ ggplot(Big_3, aes(year, rolling_mast_avg)) +
     y = "Number of Masters",
     color = "Player",
     title = "3-Year Average Annual Masters 1000 Haul",
-    subtitle = "Every year from 2003 - 2022") +
+    subtitle = "Every year from 2003 - 2023") +
   theme_minimal()
 ```
 
@@ -164,23 +166,23 @@ ggplot(Big_3, aes(year, rolling_title_avg)) +
     y = "Number of Titles",
     color = "Player",
     title = "3-Year Average Annual Title Haul",
-    subtitle = "Every year from 2003 - 2022") +
+    subtitle = "Every year from 2003 - 2023") +
   theme_minimal()
 ```
 
 ## How do Injuries and Absences Affect the Picture?
 
-Any debate around Federer, Nadal and Djokovic inevitably references their respective injuries (or lack thereof) and the what-ifs if events had unfolded more favourably in terms of fitness. As a Nadal fan, this has been a painfully recurrent issue for him as an athlete but all three have suffered at various stages of their careers. 
+Any debate around Federer, Nadal and Djokovic inevitably references their respective injuries (or lack thereof in some cases) and the what-ifs if events had unfolded more favourably in terms of fitness. As a Nadal fan, this has been a painfully recurrent issue for him as an athlete but all three have suffered at various stages of their careers. 
 
-To account for absences I have taken the rolling 3-year average of annual wins but adjusted it to be a win rate, rather than taking the count of success in each year. With this I hope to capture how dominant each player was by showing how many tournaments they won of those they entered on a 3-year rolling average basis. We can compare these to the figures above to observe if there are any noticeable changes when accounting for participation.
+To account for absences I have taken the rolling 3-year average of annual wins but adjusted it to be a win rate, rather than counting the absolute successes in each year. With this I hope to capture how dominant each player was by showing how many tournaments they won out of those they entered on a 3-year rolling average basis. We can compare these to the figures above to observe if there are any noticeable changes when accounting for participation.
 
 First, observing Grand Slam win rate, the general variations are similar. Once again, Federer's success in the mid-2000s is unmatched and for a period of two years, he was winning nearly 2/3 Grand Slams he competed in. The key difference when accounting for absence is that Rafa enjoyed a longer period of dominance in the beginning of the 2010s and it takes longer for Djokovic to reach the top. On this visualisation, Djokovic also has a short period of dominance and Federer's resurgence is stronger. This indicates that Federer was competing in less Grand Slams but was very effective at the tournaments he competed in.
 
-It is clear to see that when accounting for absence that this penalises Djokovic relative to the others. It is important to point out that some of his success was in periods where Nadal and Federer were less consistently active. However, I do not believe that this should diminish his success. I believe that the legacy of an athlete should partially be how effective they were at competing at the highest level for a long period of time. Robustness shouldn't be a caveat in Djokovic's legacy but instead a defining factor of what makes him arguabloy the greatest of all time.
+It is clear to see that when accounting for absence that this penalises Djokovic relative to the others. It is important to point out that some of his success was in periods where Nadal and Federer were less consistently active. However, I do not believe that this should diminish his success. I believe that part of the legacy of an athlete should be how effective they were at competing at the highest level for a long period of time. Robustness shouldn't be a caveat in Djokovic's legacy but instead a defining factor of what makes him arguably the greatest of all time.
 
-Similarly, a player such as Nadal should not be penalised for his injuries. These have been a simple reality of his career from the beginning. He didn't play in the 2004 Roland Garros due to a foot injury that was still giving him grief in 2022. What this graph highlights is that when he was fit enough to compete, he had an extended period of being the best in Grand Slams. Although to say he would have won more had he been more available is a null argument in my opinion. Perhaps the foregoing of the physical cost he incurred achieving his success would have resulted in less of it. And the consequences with respect to his longevity may be justified in the height of success he managed to achieve. 
+Similarly, a player such as Nadal should not be penalised for his injuries. These have been a simple reality of his career from the beginning. He didn't play in the 2004 Roland Garros due to a foot injury that was still giving him grief in 2022. What this graph highlights is that when he was fit enough to compete, he had an extended period of being the best in Grand Slams. Although to say he would have won more had he been more available is a null argument in my opinion. Perhaps the foregoing of the physical cost he incurred achieving his success would have resulted in less of it and the consequences with respect to his longevity may be justified in the height of success he managed to achieve. 
 
-What this starts to illustrate is a complex timeline of dynamics and changes that make it impossible for me to elevate one's legacy above the other. 
+What this starts to illustrate is a complex timeline of dynamics and changes that make it impossible for me to elevate one of their legacies above the others. 
 
 ```{r, echo = FALSE}
 ggplot(Big_3, aes(year, rolling_gs_win_rate)) +
@@ -191,13 +193,13 @@ ggplot(Big_3, aes(year, rolling_gs_win_rate)) +
     y = "Grand Slam Win Rate",
     color = "Player",
     title = "3-Year Average Annual Grand Slam Win Rate",
-    subtitle = "Every year from 2003 - 2022") +
+    subtitle = "Every year from 2003 - 2023") +
   theme_minimal()
 ```
 
 Next, considering the win rate on the Masters circuit, we picture changes considerably. Now, Federer once again achieves the greatest single height of success, as we have seen in other measures. Indicating that his lack of competing affected his success on the circuit rather than his dominance as a player over this time. This gives further support to the view that his dominance in this period is the most dominant tennis player ever. Although, as seen below, Djokovic enjoyed more sustained success at this level over the 2010s. But it must be noted than when we account for absence, this period is less absolutely dominant in comparison to the previous 3-year rolling average of annual wins.
 
-Unlike the other two, Nadal never reaches dizzying heights in his Masters successes but his consistency is commendable. He overtakes Federer before 2010 and maintains a consistently higher level of success than him for the most part after this point. Nadal's consistency on the Master circuit, much like on the Grand Slam circuit, it primarily attributed to his perennial dominance on the clay court season. As an eleven time winner at Monte Carlo and a ten time winner in Rome, he maintained consistent success on the Master circuit.
+Unlike the other two, Nadal never reaches dizzying heights in his Masters successes but his consistency is commendable. He overtakes Federer before 2010 and maintains a consistently higher level of success than him for the most part after this point. Nadal's consistency on the Master circuit, much like on the Grand Slam circuit, is primarily attributed to his perennial dominance on the clay court season. As an eleven time winner at Monte Carlo and a ten time winner in Rome, he maintained consistent success on the clay portion of the Masters circuit.
 
 ```{r, echo = FALSE}
 ggplot(Big_3, aes(year, rolling_mast_win_rate)) +
@@ -208,13 +210,11 @@ ggplot(Big_3, aes(year, rolling_mast_win_rate)) +
     y = "Masters Win Rate",
     color = "Player",
     title = "3-Year Average Annual Masters Win Rate",
-    subtitle = "Every year from 2003 - 2022") +
+    subtitle = "Every year from 2003 - 2023") +
   theme_minimal()
 ```
 
 Looking at tournament win rate below on a 3-year rolling average basis, we once again see unmatched dominance by Federer, before a transition period leading into Djokovic dominance. Similar to the previous figure, Nadal never hits the heights of Federer and Djokovic on titles won but he operates at a very consistent level. This win rate graph doesn't seems to differ significantly from the 3-year rolling average of annual hauls. There is the same initial height of Federer dominance, after which he and Rafa have similar levels of success. While for a period in the 2010s, Djokovic elevates himself above both of them before falling to the level Federer and Nadal had maintained throughout the decade.
-
-This figure raises the question
 
 ```{r, echo = FALSE}
 ggplot(Big_3, aes(year, rolling_title_win_rate)) +
@@ -225,15 +225,17 @@ ggplot(Big_3, aes(year, rolling_title_win_rate)) +
     y = "Title Win Rate",
     color = "Player",
     title = "3-Year Average Annual Title Win Rate",
-    subtitle = "Every year from 2003 - 2022") +
+    subtitle = "Every year from 2003 - 2023") +
   theme_minimal()
 ```
+
+\newpage
 
 # What can Head-to-Head Records Show about Dominance?
 
 Rafael Nadal and Novak Djokovic have faced eachother 59 times with the record standing at 29-30. Federer and Nadal have played 40 times with the record at 16-24. Novak and Roger have stood across from one another 50 times with a head-to-head of 27-23.
 
-These three rivalries are the sport's largest by matches played. With Lendl-McEnroe sitting in fourth with 36 matches played. Therefore, we have as much data as one could ask for in an individual sport in order to compare them. It must be acknowledged that this analysis is relatively superficial. The wealth of variables at play match to match between these three greats are significant. This section warrants it's own deep dive analysis, however, as one part of this research I hope to capture some high level themes and perhaps intrigue the reader to do their own investigation to form their opinions. This is just a starting point, but without further prefacing - let's delve in!
+These three rivalries are the sport's largest by matches played. With Lendl-McEnroe sitting in fourth with 36 matches played. Therefore, we have as much data as one could ask for in an individual sport in order to compare them. It must be acknowledged that this analysis is relatively superficial. The wealth of variables at play on a match to match basis between these three greats are significant. This section warrants it's own deep dive analysis but as only one part of this research, I hope to capture some high level themes and perhaps intrigue the reader to do their own investigation to form their own opinions. This is just a starting point, but without further prefacing - let's dive in!
 
 ```{r, echo = FALSE}
 ggplot(Big_3, aes(year, h2h_win_rate)) +
@@ -249,15 +251,15 @@ ggplot(Big_3, aes(year, h2h_win_rate)) +
   theme_minimal()
 ```
 
-When debating who is the best out of these three, their periods dominance over one another are sometimes mentioned. These conversations generally make reference to the surfaces and sometimes head-to-head records in specific scenarios such as Grand Slams. Above, is a visualisation of each individual's dominance over the other two which can show who dominated the 'Big 3' in any given year.
+When debating who is the best out of these three, their periods of dominance over one another are sometimes mentioned. These conversations generally make reference to the surfaces and sometimes head-to-head records in specific scenarios such as Grand Slams. Above, is a visualisation of each individual's dominance over the other two which can show who dominated the "Big 3" in any given year.
 
-Initially, Djokovic is not operating at the level of Rafa and Roger and this is clearly shown in the graph. However, it does not take him long to start competing with them and in 2009, he has a combined 50% win rate against the other two. In this year he plays twelve 'Big 3' matches - seven against Nadal and five against Federer. This marks the beginning of his ascension to the top of the game. By the end of 2007, he was ranked third and maintained this until he broke the Rafa-Roger dominance to reach second in early 2010.
+Initially, Djokovic is not operating at the level of Rafa and Roger and this is clearly shown in the graph. However, it does not take him long to start competing with them and in 2009, he has a combined 50% win rate against the other two. In this year he plays twelve "Big 3" matches - seven against Nadal and five against Federer. This marks the beginning of his ascension to the top of the game. By the end of 2007, he was ranked third and maintained this ranking until he broke the Rafa-Roger dominance to reach second in early 2010.
 
-His first year 'dominating' the 'Big 3' was 2011. No surprises there! He also does this in 2015, 2016, 2018 and 2020. This may be a surprisingly low number of years of dominance. The 2010s are widely considered his era. But then why during them does he only dominate his rivals in four years? Do Federer and Nadal fans have an argument about availability playing a factor? Does this add some context to the numbers he put up over this period?
+His first year 'dominating' the "Big 3" was 2011. No surprises there! He also does this in 2015, 2016, 2018 and 2020. This may be a surprisingly low number of years of dominance. The 2010s are widely considered his era, but then why over this decade does he only dominate his rivals in four years? Do Federer and Nadal fans have an argument about availability playing a factor? Does this add some context to the numbers he put up over this period?
 
-Well, four out of ten is still a majority. Additionally, he is jointly dominant in 2014 with the other two. It is also worth mentioning that using the graph below, we can see that in 2011 and 2015, there are the second and fourth most 'Big 3' head-to-heads. So he has dominated half of the top four years in terms of 'Big 3' match ups.
+Well, four out of ten is still a majority. Additionally, he is jointly dominant in 2014 with the other two. It is also worth mentioning that using the graph below, we can see that in 2011 and 2015, there are the second and fourth most "Big 3" head-to-heads. So he has dominated half of the top four years in terms of "Big 3" match ups.
 
-Who then, won the other two: 2007 and 2009? Well unlike 2011 and 2015, it was actually quite close! In 2011, Federer eeks Nadal and in 2009, Nadal tops the metric with Novak and Roger not far behind. What is noticeable about the graph above is that there is a significant drop off in terms of the activity of the 'Big 3' rivalry after 2015. From 2006 - 2015, close there are a minimum of nine of these matches every year with a maximum of sixteen in 2007. Numbers that we just don't see after that.
+Who then, won the other two: 2007 and 2009? Well unlike 2011 and 2015, it was actually quite close! In 2011, Federer edges Nadal and in 2009, Nadal tops the metric with Novak and Roger not far behind. What is noticeable about the graph above is that there is a significant drop off in terms of the activity of the "Big 3" rivalry after 2015. From 2006 - 2015, close there are a minimum of nine of these matches every year with a maximum of sixteen in 2007. Numbers that we just don't see after that.
 
 ```{r, echo = FALSE}
 ggplot(Big_3[Big_3$player == "Djokovic",], aes(year, h2h_total)) +
@@ -271,13 +273,13 @@ ggplot(Big_3[Big_3$player == "Djokovic",], aes(year, h2h_total)) +
   theme_minimal()
 ```
 
-Nadal dominates six years: 2006, 2008, 2009, 2010, 2012 and 2013. This is more than the other manage over this period with Federer having only two years of absolute dominance. This presents a perspective that illustrates a point that many Rafa fans would like you to know: that on a head-to-head basis, he has the edge and at the very least cannot be argued over. I would also be remiss to omit his record against Novak and Roger in Grand Slams which are 11-7 and 10-4, respectively. Removing Roland Garros these are 3-5 and 4-4, respectively. Not dominant, but considering these are records against the greatest of all time on hard and grass courts, that's not a bad record at all.
+Nadal dominates six years: 2006, 2008, 2009, 2010, 2012 and 2013. This is more than the other manage over this period with Federer having only two years of absolute dominance. This presents a perspective that illustrates a point that many Rafa fans would like you to know: that on a head-to-head basis (except his H2H with Novak where his record is 29-30), he has the edge and at the very least cannot be argued over. I would also be remiss to omit his record against Novak and Roger in Grand Slams which are 11-7 and 10-4, respectively. Removing Roland Garros, these are 3-5 and 4-4. Not dominant, but considering these are records against the greatest of all time on hard and grass courts, that's not a bad record at all.
 
-What stands out from this win rate graph for Rafa are two predominant trends. Namely 2006-2013 and 2013-2020. The first half of this 'Big 3' era, he dominates this metric, leading it 6/8 years. However, if you were to listen to him talk during this period or others discussing this era, Federer was the man. Does this indicate that this sentiment was not entirely acurrate? Is this Rafa's era more than others (including Rafa himself) would have you believe?
+What stands out from this win rate graph for Rafa are two predominant trends. Namely 2006-2013 and 2013-2020. The first half of this "Big 3" era, he dominates this metric, leading it 6/8 years. However, if you were to listen to him talk during this period or others discussing this era, Federer was the man. Does this indicate that this sentiment was not entirely accurate? Is this Rafa's era more than others (including Rafa himself) would have you believe?
 
-What I believe prevents this from being Nadal's era are a couple factors. Firstly, the tennis world at this time is in awe of Federer, and for good reason. We illustrated earlier his unprecedented dominance on the biggest stage since he won his first slam at Wimbledon 2003. To suddenly pass on the mantle did not make sense in the minds of most people, especially when during this time he was still winning on a huge level and an unbroken run at world number one until 2008. Second, in 2011, Djokovic was the most dominant force in the sport as the floodgates of his success broke. Beating Rafa in each of their six meetings in this year, including two major finals. 
+What I believe prevents this from being Nadal's era are a couple factors. Firstly, the tennis world at this time is in awe of Federer, and for good reason. We illustrated earlier his unprecedented dominance on the biggest stage since he won his first slam at Wimbledon 2003. To suddenly pass on the mantle did not make sense in the minds of most people, especially when during this time he was still winning on a huge level and had an unbroken run at world number one until 2008. Second, in 2011, Djokovic was the most dominant force in the sport as the floodgates of his success broke. Beating Rafa in each of their six meetings in this year, including two major finals. 
 
-This period sees the fall of Federer and the rise of Djokovic as Rafa's primary rival. Nadal has a short window in the intervening period where he stands tall, but on either side of this are two immense legacies that perhaps othershadow it. During this time, Nadal becomes the youngest player to complete the career Grand Slam and the second (and the only one out of the 'Big 3') to complete the Golden Slam with his gold medal at Beijing 2008. He dethrones the darling of tennis in Roger Federer, and holds off the inevitable onslaught that is Novak Djokovic. I believe this is what defines Rafael Nadal's career. Unlike Roger early on, and Novak in the present, he never had a period where he didn't have to compete against at least one of the other two. Does this make his career more impressive then, relative to the others? Well I leave that up to you.
+This period sees the fall of Federer and the rise of Djokovic as Rafa's primary rival. Nadal has a short window in the intervening period where he stands tall, but on either side of this are two immense legacies that perhaps othershadow him. Over his career, Nadal becomes the youngest player to complete the career Grand Slam and the second (and the only one out of the "Big 3") to complete the Golden Slam with his gold medal at Beijing 2008. He dethrones the darling of tennis in Roger Federer, and holds off the inevitable onslaught that is Novak Djokovic. I believe this is what defines Rafael Nadal's career. Unlike Roger early on, and Novak in the present, he never had a period where he didn't have to compete against at least one of the other two. Does this make his career more impressive then, relative to the others? Well I leave that up to you.
 
 ```{r, echo = FALSE}
 ggplot(Big_3, aes(year, m_played)) +
@@ -288,19 +290,23 @@ ggplot(Big_3, aes(year, m_played)) +
     y = "Matches Played",
     color = "Player",
     title = "Big 3 Matches Played Each Year",
-    subtitle = "Every year from 2003 - 2022") +
+    subtitle = "Every year from 2003 - 2023") +
   theme_minimal()
 ```
 
-Of all the trends that stand out in the head-to-head win rate graph, Federer's lack of dominance is one of the clearest. Considering his immense legacy, 2007 and 2017 are the only years that he dominates the 'Big 3'. This doesn't really add up. What it does is presents the other side to the Federer debate. In earlier sections, we see that he enjoys success never emulated since when reaches the top of the sport. From 2004 to 2007, he wins eleven Grand Slams. The sport of tennis owes a significant part of its success to the way a young Federer took the sporting world by storm. But must we also confront ourselves with the reality that once Nadal, and subsequently Djokovic strated to reach the peaks of their powers that he couldn't dominate them. After 2010, Federer only manages to win four majors, only one more than both Andy Murray and Stan Wawrinka manages over this period. With the greatest respect to both of those incredible athletes, Federer will always be considered in a different stratosphere of the sport. Nevertheless, this other side of the Federer coin cannot be ignored.
+Of all the trends that stand out in the head-to-head win rate graph, Federer's lack of dominance is one of the clearest. Considering his immense legacy, 2007 and 2017 are the only years that he dominates the "Big 3". This doesn't really add up. What it does is presents the other side to the Federer debate. In earlier sections, we see that he enjoys success never emulated since when reaches the top of the sport. From 2004 to 2007, he wins eleven Grand Slams. The sport of tennis owes a significant part of its success to the way a young Federer took the sporting world by storm. But must we also confront ourselves with the reality that once Nadal, and subsequently Djokovic started to reach the peaks of their powers that he couldn't dominate them. After 2010, Federer only manages to win four majors, only one more than both Andy Murray and Stan Wawrinka manages over this period. With the greatest respect to both of those incredible athletes, Federer will always be considered in a different stratosphere of the sport. Nevertheless, this other side of the Federer coin cannot be ignored.
+
+\newpage
 
 # Comparing Fictional Realities
 
 This next section embarks on a somewhat more fantastical exploration of this rivalry. However, despite the fallibility of this particular analysis, it is still presents interesting scenarios for fans of the game to consider. We are lucky to have fifteen years when these three men competed on the ATP Tour during which they fought for tennis's biggest honours. We will utilise the integral role the battles fought between these men had on eachothers' legacies as catalysts to entertaining musings.
 
-## Comparing Hypothetical Grand Slam Hauls in the Absence of Each Player
+## Comparing Hypothetical Success in the Absence of Each Player - Nadal
 
+Nadal has been the foil to each of Federer and Djokovic's respective eras. He prevented Federer from completely owning the 2000s and Djokovic sweeping all before him in the 2010s. Of all of the respective rivalries within the "Big 3", the Novak vs Roger seems to be the one with the least overlap. This, however, is not necessarily the case if we look at the numbers. Federer has played Djokovic 50 times, and Nadal only 40 Despite this, but ask most tennis fans and they will tell you the greatest rivalry of all time in tennis is Roger-Rafa. Federer and Djokovic have shared the biggest stage even well into the last decade. Culminating with an all-time classic in the 2019 Wimbledon final.
 
+Regardless of this counter argument, it is undeniable that Nadal has been a hugely defining factor in the legacies of both these men and so we will use a form of alternative history in order to attempt to quantify this effect. Every Grand Slam final where Nadal has played Federer or Djokovic, we will now be given as a win for Roger and Novak. This will give each of them an additional title for each time Rafa beat them at this stage. We are not considering defeats to Nadal at any other stage in order to be as valid as possible in our approach. We are only considering when Nadal was definitively the only obstacle standing between them and Grand Slam glory. I acknowledge that this is a flawed measure and I do not put great weight in its results. Nadal may have beaten someone in the semi final that would have then won the final, but I hope that the results regardless are at least entertaining to consider. we will consider this for each member of the "Big 3" and observe the results.
 
 ```{r, echo = FALSE}
 ggplot(Big_3[Big_3$player %in% c("Federer", "Djokovic"),], aes(year, gs_no_nadal)) +
@@ -311,42 +317,13 @@ ggplot(Big_3[Big_3$player %in% c("Federer", "Djokovic"),], aes(year, gs_no_nadal
     y = "Grand Slams Won",
     color = "Player",
     title = "Federer and Djokovic Annual Grand Slam Haul With No Nadal",
-    subtitle = "Every year from 2003 - 2022") +
+    subtitle = "Every year from 2003 - 2023") +
   theme_minimal()
 ```
 
+Using this Nadal-less approach, instead of Federer and Djokovic having 20 and 23 Grand Slams respectively, they now have 26 and 28. Years that stand out in particular are 2006 and 2007. It's been nearly fifty-four years since Rod Laver achieved the calendar Grand Slam. In conversations around legacy of recent tennis greats, not only the "Big 3" but Serena Williams as well, this has often been described as what would be the crowning achievement of whoever were do achieve it. No has managed this since (yet!), but looking at the graph above, Nadal potentially stopped this not just once, but twice! In addition, they would have been achieved back-to-back. On the contrary, Djokovic has not faced Nadal in the same circumstances and has no calendar Grand Slams (yet!) in this alternative history.
 
-
-```{r, echo = FALSE}
-ggplot(Big_3[Big_3$player %in% c("Nadal", "Djokovic"),], aes(year, gs_no_federer)) +
-  geom_line(aes(color = player)) +
-  scale_color_manual(values = c("Blue", "Orange")) +
-  labs(
-    x = "Year",
-    y = "Grand Slams Won",
-    color = "Player",
-    title = "Nadal and Djokovic Annual Grand Slam Haul With No Federer",
-    subtitle = "Every year from 2003 - 2022") +
-  theme_minimal()
-```
-
-
-
-```{r, echo = FALSE}
-ggplot(Big_3[Big_3$player %in% c("Nadal", "Federer"),], aes(year, gs_no_djokovic)) +
-  geom_line(aes(color = player)) +
-  scale_color_manual(values = c("Green", "Orange")) +
-  labs(
-    x = "Year",
-    y = "Grand Slams Won",
-    color = "Player",
-    title = "Federer and Nadal Annual Grand Slam Haul With No Djokovic",
-    subtitle = "Every year from 2003 - 2022") +
-  theme_minimal()
-```
-
-## Visualising Hypothetical Periods of Dominance in the Absence of Each Player
-
+Federer managed to win 16 Grand Slams by the end of 2010, 80% of his final total. At this time, Djokovic had one, so it is fair to put them in their own eras to a degree. In the alternative history shown above, Federer has his current career total by the end of 2009. The picture for Djokovic, however, looks somewhat different. The period over which he was affected by Nadal is longer than it was for Federer. What we can see is just elite consistency, particularly from 2011-2016. In this time he wins 11 majors, including three years of winning two or more. In the alternative history above, this goes up to 14 and he wins two or more every year over this time. He also enjoys more success at the end of the 2010s and the turn of the decade. 
 
 ```{r, echo = FALSE}
 ggplot(Big_3[Big_3$player %in% c("Federer", "Djokovic"),], aes(year, rolling_gs_avg_no_nadal)) +
@@ -357,9 +334,33 @@ ggplot(Big_3[Big_3$player %in% c("Federer", "Djokovic"),], aes(year, rolling_gs_
     y = "Grand Slams Won",
     color = "Player",
     title = "Federer and Djokovic 3-Year Average Grand Slam Haul With No Nadal",
-    subtitle = "Every year from 2003 - 2022") +
+    subtitle = "Every year from 2003 - 2023") +
   theme_minimal()
 ```
+
+Using the rolling 3-year average, we transform the annual Grand Slam hauls to a measure of dominance over a three year period of time. This visualises sustained success and improves the visualisation of the hypothetical effects of no Nadal on Novak and Roger's success. What we see is two distinct eras: Federer's world from 2005-2010, and Djokovic's since. Similar to previous graphs, Djokovic does not reach the height of dominance that Federer manages in the late 2000s. In our alternative history, this is further exaggerated. Despite a period of resurgence from Federer towards the end of the 2010s which is partly aided by fitness issues for Djokovic, Novak is the dominant force in this era. Prior to 2011, Djokovic's win rate against Federer is 32%, and from this point it is 68%.
+
+Federer took tennis by storm and started bringing it into the mainstream before Nadal reached the top, but their rivalry pushed the sport to levels that would not have been reached by Federer alone. Similarly, Nadal's dominance in the late 2010s and continued efforts throughout the next decade sustained the momentum of the sport into what we now called the era of the "Big 3". Without any of these three, tennis loses, but I often wonder if (perhaps biased) Rafael Nadal is who we should truly thank for where tennis is today. The soul of the sport who was perhaps unable to dominate the sport in the fashion of Federer and Djokovic, but nevertheless enhanced the game in a way that no one ever has.
+
+## Comparing Hypothetical Success in the Absence of Each Player - Federer
+
+Arguably the man who is responsible for bringing tennis into the modern age. Reflected in his ability to still be one the highest earning sportsmen in the world, despite being years past his peak. Roger Federer is more than a tennis icon, he is an icon that surpasses the sport in which he plays which is only achieved by a special few. Imagining tennis without him is impossible, in particular for me. I have never known tennis where Roger was not the biggest star, and would not want to. Despite this, in the interest of fun conversations, we will construct an alternative history as above except now excluding Federer. 
+
+```{r, echo = FALSE}
+ggplot(Big_3[Big_3$player %in% c("Nadal", "Djokovic"),], aes(year, gs_no_federer)) +
+  geom_line(aes(color = player)) +
+  scale_color_manual(values = c("Blue", "Orange")) +
+  labs(
+    x = "Year",
+    y = "Grand Slams Won",
+    color = "Player",
+    title = "Nadal and Djokovic Annual Grand Slam Haul With No Federer",
+    subtitle = "Every year from 2003 - 2023") +
+  theme_minimal()
+```
+
+As of today, Novak Dojokovic and Rafael Nadal have 23 and 22 majors respectively, in the reality presented above, they have 24 and 25. In the case of Djokovic this is the most minimal of changes, again highlighting the fact that they operated largely in different eras. With his only Grand Slam final defeat to Federer coming at the 2007 US Open. Djokovic holds a 4-1 record over Federer in Grand Slam finals. There is a slightly larger effect on Nadal, who picks up an extra three titles. Two Wimbledon titles in 2006 and 2007, and the Australian Open in 2017 (this is one of the most painful ones that got away as a Nadal fan). So in this alternative reality, Nadal manages a dynasty on grass, winning Wimbledon four out of a possible five times between 2006-2010. Perhaps illustrating that his grass pedigree, which he has more recently been derided for a lack of, was very real. Nadal holds a 6-3 record against Federer in Grand Slam finals.
+
 ```{r, echo = FALSE}
 ggplot(Big_3[Big_3$player %in% c("Nadal", "Djokovic"),], aes(year, rolling_gs_avg_no_federer)) +
   geom_line(aes(color = player)) +
@@ -369,9 +370,38 @@ ggplot(Big_3[Big_3$player %in% c("Nadal", "Djokovic"),], aes(year, rolling_gs_av
     y = "Grand Slams Won",
     color = "Player",
     title = "Nadal and Djokovic 3-Year Average Grand Slam Haul With No Federer",
-    subtitle = "Every year from 2003 - 2022") +
+    subtitle = "Every year from 2003 - 2023") +
   theme_minimal()
 ```
+
+What a lack of Federer hypothetically allows is a genuine period of Nadal dominance, which he arguably does not have in reality. The 2010s look almost identical, as Federer was not as much of a deciding factor in this time, especially relative to the 2000s. We Still have the epic Novak-Rafa rivalry, which currently stands as tennis's biggest from a numbers perspective. No doubt this would have been captivating, but losing Federer as a factor over this time would undeniably have robbed the sport of an elite athlete who was usually the most likely to beat the other two at most points. I would also argue that it was Federer's seemingly effortless longevity that has spurred Rafa and Novak to maximise their careers. 
+
+
+Watching Federer play will always be one of tennis's greatest sites. Seeing the Swiss maestro glide around the court is a kind of beauty I have never seen on a tennis court. A kind of beauty that made the world fall in love with tennis, and that inspired a generation.
+
+## Comparing Hypothetical Success in the Absence of Each Player - Djokovic
+
+Finally, we arrive at who is arguably the most likely of all three men to be recognised as 'the greatest' once all is said and done. I must admit that it took some time for Djokovic to grow on me, but his story and ability are impossible not to at least respect. Hailing from from what is definitely the most challenging background of the "Big 3", in a sport that struggles with accessibility is something that clearly defines him as a character. His ability to perform in the biggest moments is the best I have ever seen, and his ruthlessness to both close out advantages and pull them back is one of my favourite attributes of his. There has never been a moment in a game I have watched him play where I thought he was out of the fight. Nadal will always be associated in tennis with the word 'fighter', but Novak is cut from the same cloth.
+
+When Djokovic reached the top of tennis, there was an incumbent duopoly running the game. Between them, they seemed to have saturated all the affection of tennis fans, and the adoration of tennis media. Novak's journey at the top has often not been judged on his own merits, but in relation to what has come before. Nadal and Federer will always be the darlings of tennis and this will not change. Djokovic was the villain, and although he may not have wanted or enjoyed this role, it seems as though he has come to accept it and find fortitude in it. He is a hardened winner, who has not been given anything in his tennis career. Everything has been earned through grinding to become better than everyone else until he was simply undeniable.
+
+```{r, echo = FALSE}
+ggplot(Big_3[Big_3$player %in% c("Nadal", "Federer"),], aes(year, gs_no_djokovic)) +
+  geom_line(aes(color = player)) +
+  scale_color_manual(values = c("Green", "Orange")) +
+  labs(
+    x = "Year",
+    y = "Grand Slams Won",
+    color = "Player",
+    title = "Federer and Nadal Annual Grand Slam Haul With No Djokovic",
+    subtitle = "Every year from 2003 - 2023") +
+  theme_minimal()
+```
+
+Currently, Federer and Nadal have 20 and 22 majors respectively, in the alternative history above, they have 24 and 26. Federer has struggled against Novak in Grand Slam finals, as the balance of power between them shifted at the turn of the 2010s. Without this obstacle, the decline from the heights of his powers would maybe have been more gradual and graceful. Not enduring as many droughts of success as he has over this period. Nadal has a 5-4 record over Novak in major finals. Similar to his early struggles against Federer at Wimbledon, Nadal may have won more Australian Opens with no Novak. He has only managed two, including a victory in what is maybe my favourite Nadal match I have watched in 2022.
+
+Perhaps the biggest difference, similar to a reality with no Federer, is that Nadal would have a recognisable period of dominance. 2011 in particular when Djokovic beats Nadal in all six finals in which they met: four Masters 1000s and two Grand Slams, is a pivotal moment in the legacy of the "Big 3", and an indication of the changing of the guard that was imminent in the sport. However, this period would have likely been subject to much more competition and seen more success for the players right below these three greats. What me must also consider is the dominance Djokovic has shown over the rest of the competition and how he had suppressed challenges from players that would have been all-time greats in other eras. His command of the hard court surface, where the majority of the tennis calendar is played and which is arguably the most competitive of all surfaces is underappreciated in my view. 
+
 ```{r, echo = FALSE}
 ggplot(Big_3[Big_3$player %in% c("Nadal", "Federer"),], aes(year, rolling_gs_avg_no_djokovic)) +
   geom_line(aes(color = player)) +
@@ -381,7 +411,16 @@ ggplot(Big_3[Big_3$player %in% c("Nadal", "Federer"),], aes(year, rolling_gs_avg
     y = "Grand Slams Won",
     color = "Player",
     title = "Federer and Nadal 3-Year Average Grand Slam Haul With No Djokovic",
-    subtitle = "Every year from 2003 - 2022") +
+    subtitle = "Every year from 2003 - 2023") +
   theme_minimal()
 ```
 
+I have little doubt that Nadal would have been more successful in the 2010s without Djokovic, and maybe it would be recognised as his decade rather than Novak's. However, without Novak there is also the consideration of all of the other players he has prevented from taking a foothold in the game. Having no Djokovic would not have changed the popularity of the sport generated from the Nadal-Federer rivalry, but his contribution to the sport has extended the drama and heightened interest even more. By the middle of the 2010s, without Djokovic, tennis may have just been a waiting game for the few occasions where Rafa and Roger met. Djokovic breathed life into the sport, and has taken the mantle as the primary force in the game. He is not given enough credit for the way in which he has handled this responsibility, and how much of a credit he is to the sport of tennis.
+
+\newpage
+
+# Conclusion
+
+I want to be clear that I am not insinuating that history may have played out like I postulate above. In fact, I believe that the presence of each of these three greats has materially improved the other two. The legacies of each of them will be forever intertwined, and as a fan of both the sport and Nadal, I would not want it any other way. This is why, that after this investigation and research, I have not found an answer as to who sits atop the "Big 3" but have instead achieved a new appreciation for each of them.
+
+Athletes are defined by who they beat as much as by what they win. Each of them has driven the others to be better and have upheld a level of conduct that has put the game in a stronger position compared to where they inherited it. As a lover of sport, this is all I can ask of athletes and I will be forever grateful to have witnessed this era of the "Big 3".
